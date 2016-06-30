@@ -3,15 +3,27 @@
 <head>
 	<meta charset="UTF-8">
 	<title>dom练习</title>
-	<script type="text/javascript">
-		var oUl=document.getElementById('ul1');
-		alert(typeof oUl);//类型是个对象object
-	</script>
 </head>
 <body>
 	<ul id="ul1">
-		<p>dom来喽</p>
+		<li>dom来喽</li>
+		<li>dom来喽</li>
+		<li>dom来喽</li>
+		<li>dom来喽</li>
 	</ul>
-
+	<p>9999</p>
+	<p>9999</p>
+	<p>9999</p>
 </body>
 </html>
+<script type="text/javascript">
+	var oUl=document.getElementById('ul1');
+	var oLi=document.getElementsByTagName("li");//返回的是一个数组
+	alert(typeof oUl);//类型是个对象object
+	alert(typeof oLi);
+	alert(document.getElementsByTagName("li").length);
+	for (var i = 0; i < oLi.length; i++) {
+		alert(typeof oLi[i]);
+		oLi[i].style.background="green";
+	}
+</script>
