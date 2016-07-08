@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计时跳转</title>
+</head>
+<body>
+	<b id="second">5</b>秒后跳转百度
+	<a href="javascript:goBack();">返回</a>
+</body>
+</html>
+<script type="text/javascript">
+	var sec=document.getElementById("second");
+	var i=5;
+	setInterval(function(){
+		i--;
+		sec.innerHTML=i;//i要先减减然后再赋值
+		if (i==1) {
+			window.location.href="http://www.baidu.com";
+		};
+	},1000);
+	function goBack(){
+		window.history.go(-1);
+	}
+</script>
